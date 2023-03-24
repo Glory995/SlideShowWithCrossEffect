@@ -32,3 +32,24 @@ a{
     font-size: 20px;
     
 }
+
+a:hover{
+
+    color:#BAB86C;
+}
+
+.fadeinimg{
+
+    animation-name: fadein;
+    animation: 2s;
+}
+
+@keyframes fadein{
+
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
