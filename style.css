@@ -30,6 +30,7 @@ a{
     margin-top: 5px;
     color: white;
     font-size: 20px;
+    text-decoration: none;
     
 }
 
@@ -40,8 +41,7 @@ a:hover{
 
 .fadeinimg{
 
-    animation-name: fadein;
-    animation: 2s;
+    animation: fadein 2s;
 }
 
 @keyframes fadein{

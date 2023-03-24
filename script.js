@@ -13,11 +13,16 @@
     previous.addEventListener("click", previousPhoto)
 
 
-    function nextPhoto(){
+    function nextPhoto(e){
+        e.preventDefault();
         currentImage++;
 
         if(currentImage > myImages.length-1){currentImage=0}
-        document.getElementById("img").src= myImages[currentImage];
+
+        const newSlide= document.createElement('img');
+        newSlide.src=myImages[currentImage];
+        newSlide.className= "fadeinimg";
+        container.appendChild(newSlide);
 
 
     }
@@ -26,7 +31,10 @@
         currentImage =currentImage-1;
 
         if(currentImage < 0){currentImage=5}
-        document.getElementById("img").src= myImages[currentImage];
+        const newSlide= document.createElement('img');
+        newSlide.src=myImages[currentImage];
+        newSlide.className= "fadeinimg";
+        container.appendChild(newSlide);
 
     }
 
