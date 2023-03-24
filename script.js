@@ -19,10 +19,7 @@
 
         if(currentImage > myImages.length-1){currentImage=0}
 
-        const newSlide= document.createElement('img');
-        newSlide.src=myImages[currentImage];
-        newSlide.className= "fadeinimg";
-        container.appendChild(newSlide);
+        callUp();
 
 
     }
@@ -31,11 +28,22 @@
         currentImage =currentImage-1;
 
         if(currentImage < 0){currentImage=5}
+        
+        callUp();
+
+       
+
+    }
+
+    function callUp() {
         const newSlide= document.createElement('img');
         newSlide.src=myImages[currentImage];
         newSlide.className= "fadeinimg";
         container.appendChild(newSlide);
 
+         if( container.children.length > 2){
+            container.removeChild( container.children[0])
+        }
     }
 
 })()
